@@ -14,10 +14,9 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // Yahan aap apni contact information add kar sakte hain
+
   const contactInfo = {
     email: "gmayesha2004@gmal.com",
-    phone: "+92 3169344686",
     location: "Islamabad , Punjab, Pakistan",
     socialLinks: {
       github: "https://github.com/Ayesha0000000",
@@ -38,8 +37,6 @@ const Contact = () => {
 
     // Simulate form submission
     try {
-      // Yahan aap actual form submission logic add kar sakte hain
-      // Example: await submitForm(formData);
       
       setTimeout(() => {
         setIsSubmitting(false);
