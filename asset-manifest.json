@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Ayesha-portfolio/static/css/main.46dc64d2.css",
+    "main.js": "/Ayesha-portfolio/static/js/main.e9e1d5bd.js",
+    "static/js/453.438d9e50.chunk.js": "/Ayesha-portfolio/static/js/453.438d9e50.chunk.js",
+    "index.html": "/Ayesha-portfolio/index.html",
+    "main.46dc64d2.css.map": "/Ayesha-portfolio/static/css/main.46dc64d2.css.map",
+    "main.e9e1d5bd.js.map": "/Ayesha-portfolio/static/js/main.e9e1d5bd.js.map",
+    "453.438d9e50.chunk.js.map": "/Ayesha-portfolio/static/js/453.438d9e50.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46dc64d2.css",
+    "static/js/main.e9e1d5bd.js"
+  ]
+}
