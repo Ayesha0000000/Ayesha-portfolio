@@ -1,7 +1,7 @@
 // src/components/Home.js
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, Download, Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hero-title"
             >
-              Hi, I'm{' '}
+              Heyyy, I'm{' '}
               <span className="gradient-text">Ayesha</span>
             </motion.h1>
             
@@ -47,7 +47,10 @@ const Home = () => {
               <a href="https://github.com/Ayesha0000000" className="social-link">
                 <Github size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/ayesha-muhammad-490023374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="social-link">
+              <a 
+                href="https://www.linkedin.com/in/ayesha-muhammad-490023374" 
+                className="social-link"
+              >
                 <Linkedin size={24} />
               </a>
             </motion.div>
@@ -61,7 +64,7 @@ const Home = () => {
           >
             <div className="image-container">
               <img 
-                src="/images/profile.jpg" 
+                src={`${process.env.PUBLIC_URL}/images/profile.jpg`} 
                 alt="Profile"
                 onError={(e) => {
                   e.target.src = "https://via.placeholder.com/400x400/8B5CF6/FFFFFF?text=Your+Photo";
