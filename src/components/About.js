@@ -4,33 +4,30 @@ import { motion } from 'framer-motion';
 import { Award, Calendar, MapPin, Heart } from 'lucide-react';
 
 const About = () => {
-  // Yahan aap apni information add kar sakte hain
   const aboutData = {
     introduction: "🚀 Full-Stack Developer & AI/ML Engineer with expertise in Django REST, React, and AI/ML. I build scalable web apps, robust APIs, and intelligent systems that deliver real business impact.",
-    mission: "My mission is to To build smart, scalable, and impactful solutions through Full-Stack Development and AI/ML.",
+    mission: "My mission is to build smart, scalable, and impactful solutions through Full-Stack Development and AI/ML.",
     experience: "1+ years",
     location: "Islamabad, Pakistan",
-    interests: ["Web Development", "Django", "React",  "Ai", "Backend Development", "Machine Learning" ]
+    interests: ["Web Development", "Django", "React", "AI", "Backend Development", "Machine Learning"]
   };
 
   const timeline = [
-     {
+    {
       year: "2025",
       title: "Full Stack Developer",
       description: "Built multiple web applications using React, Node.js, and MongoDB"
     },
     {
       year: "2025",
-      title: "backend  Developer",
-      description: "Leading  Backend development projects "
+      title: "Backend Developer",
+      description: "Leading Backend development projects"
     },
-    ,
     {
       year: "2024",
       title: "Frontend Developer",
       description: "Started professional career focusing on React and modern JavaScript"
     },
-   
   ];
 
   const stats = [
@@ -88,7 +85,7 @@ const About = () => {
             >
               <div className="image-container">
                 <img 
-                  src="/images/profile.jpg" 
+                  src={`${process.env.PUBLIC_URL}/images/profile.jpg`} 
                   alt="About Me"
                   onError={(e) => {
                     e.target.src = "https://via.placeholder.com/400x500/8B5CF6/FFFFFF?text=Your+Photo";
