@@ -35,7 +35,7 @@ const Projects = () => {
       technologies: ["Python", "OpenCV", "Mediapipe", "Tensorflow"],
       demoUrl: "https://github.com/Ayesha0000000/hand-gesture-drawing.git",
       githubUrl: "https://github.com/Ayesha0000000/hand-gesture-drawing.git",
-      videoUrl: `${process.env.PUBLIC_URL}/videos/Hand-gesture-drwaing.mp4`, 
+      videoUrl: `${process.env.PUBLIC_URL}/videos/Hand-gesture drwaing.mp4`, 
       features: ["🎥 Real-time Hand Tracking", "✋ Gesture-based Drawing"],
       challenges: "Real-time hand tracking...",
       learnings: "Worked with Mediapipe..."
@@ -49,7 +49,7 @@ const Projects = () => {
       technologies: ["Django", "React", "SQLite", "Bootstrap", "DeepFace", "YOLO", "OpenCV"],
       demoUrl: "https://github.com/Ayesha0000000/local_camera_stream.git",
       githubUrl: "https://github.com/Ayesha0000000/local_camera_stream.git",
-      videoUrl: `${process.env.PUBLIC_URL}/videos/full_stack-emotion.mp4`,
+      videoUrl: `${process.env.PUBLIC_URL}/videos/full_stack emotion.mp4`,
       features: ["👤 Person Management", "🎥 Live Emotion Detection"],
       challenges: "Real-time face & emotion detection...",
       learnings: "Built AI-powered Django backend..."
