@@ -85,7 +85,7 @@ const About = () => {
             >
               <div className="image-container">
                 <img 
-                  src={`${process.env.PUBLIC_URL}/images/profile.jpg`} 
+                  src={`${process.env.PUBLIC_URL}/images/code.jpg`} 
                   alt="About Me"
                   onError={(e) => {
                     e.target.src = "https://via.placeholder.com/400x500/8B5CF6/FFFFFF?text=Your+Photo";

@@ -1,56 +1,17 @@
 // src/components/Contact.js
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-
-
   const contactInfo = {
     email: "gmayesha2004@gmal.com",
+    phone: "Not Available",
     location: "Islamabad , Punjab, Pakistan",
     socialLinks: {
       github: "https://github.com/Ayesha0000000",
       linkedin: "https://www.linkedin.com/in/ayesha-muhammad-490023374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    }
-  };
-
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    try {
-      
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        
-        // Reset status after 3 seconds
-        setTimeout(() => setSubmitStatus(null), 3000);
-      }, 2000);
-      
-    } catch (error) {
-      setIsSubmitting(false);
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus(null), 3000);
+      twitter: "https://twitter.com" // placeholder
     }
   };
 
@@ -73,6 +34,8 @@ const Contact = () => {
             transition={{ delay: 0.2 }}
             className="contact-info"
           >
+            center
+
             <h3>Let's Talk</h3>
             <p>
               I'm always interested in hearing about new projects and opportunities.
@@ -105,6 +68,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Social Links */}
             <div className="social-links">
               <h4>Follow Me</h4>
               <div className="social-buttons">
@@ -137,105 +101,6 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-            className="contact-form-container"
-          >
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="form-input"
-                />
-              </div>
-
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="form-input"
-                />
-              </div>
-
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  required
-                  className="form-input"
-                />
-              </div>
-
-              <div className="form-group">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows="5"
-                  className="form-textarea"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`submit-btn ${isSubmitting ? 'submitting' : ''} ${submitStatus ? submitStatus : ''}`}
-              >
-                {isSubmitting ? (
-                  <>
-                    <motion.div
-                      className="spinner"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send size={16} />
-                    Send Message
-                  </>
-                )}
-              </button>
-
-              {submitStatus === 'success' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="status-message success"
-                >
-                  Message sent successfully! I'll get back to you soon.
-                </motion.div>
-              )}
-
-              {submitStatus === 'error' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="status-message error"
-                >
-                  Failed to send message. Please try again or contact me directly.
-                </motion.div>
-              )}
-            </form>
           </motion.div>
         </div>
       </div>
